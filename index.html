@@ -9,7 +9,7 @@
 <meta property="og:title" content="São 18h40. A geladeira está cheia e você não sabe o que preparar.">
 <meta property="og:description" content="145 receitas curtas, cada uma com lista de compras. Acesso imediato após a compra.">
 <meta property="og:image" content="assets/produto.jpg">
-<link rel="stylesheet" href="assets/styles.css?v=3">
+<link rel="stylesheet" href="assets/styles.css?v=5">
 <link rel="preload" as="image" href="assets/produto.webp">
 </head>
 <body>
@@ -37,8 +37,8 @@
         <p class="minor">Material de educação culinária · Não substitui acompanhamento médico ou nutricional.</p>
 
         <div class="strip">
-          <span>145 receitas no total</span>
-          <span>Lista de compras em cada guia</span>
+          <span>145 receitas</span>
+          <span>89 páginas</span>
           <span>Acesso imediato</span>
         </div>
       </div>
@@ -307,6 +307,13 @@
   </div>
 </footer>
 
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <div class="sticky-price"><b>R$ 19,90</b><span>pagamento único</span></div>
+    <a class="btn" href="https://pay.cakto.com.br/6frywru">Quero as 100 receitas</a>
+  </div>
+</div>
+
 <script>
   document.getElementById('ano').textContent = new Date().getFullYear();
 
@@ -331,6 +338,35 @@
       }
     });
   }
+
+  /* barra fixa de compra: aparece após o hero e some quando a oferta está na tela */
+  (function () {
+    var bar = document.getElementById('stickyCta');
+    var offer = document.getElementById('oferta');
+    if (!bar || !offer) return;
+    var mq = window.matchMedia('(max-width:700px)');
+    var visible = false;
+
+    function update() {
+      if (!mq.matches) {
+        if (visible) { bar.classList.remove('is-visible'); document.body.classList.remove('has-sticky'); visible = false; }
+        return;
+      }
+      var r = offer.getBoundingClientRect();
+      var offerOnScreen = r.top < window.innerHeight * 0.85 && r.bottom > 0;
+      var shouldShow = window.scrollY > 480 && !offerOnScreen;
+      if (shouldShow !== visible) {
+        visible = shouldShow;
+        bar.classList.toggle('is-visible', visible);
+        document.body.classList.toggle('has-sticky', visible);
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    if (mq.addEventListener) mq.addEventListener('change', update);
+    update();
+  })();
 </script>
 </body>
 </html>
