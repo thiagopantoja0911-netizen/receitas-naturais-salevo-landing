@@ -194,3 +194,7 @@ cakto-upsell-reject::part(button){background:transparent;color:var(--muted);bord
   .actions .btn.secondary{display:none}
   .hero .strip span{font-size:11px;padding:5px 10px}
 }
+
+/* ---------- contraste AA em seções claras ---------- */
+.mint .eyebrow,.gift .eyebrow{color:#8a4a2e}
+.mint .steps strong{color:var(--ink)}
