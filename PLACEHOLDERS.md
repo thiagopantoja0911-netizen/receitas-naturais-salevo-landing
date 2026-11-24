@@ -6,7 +6,6 @@ Para ativar: remova os delimitadores do comentário, preencha os campos em MAIÚ
 | Bloco | Onde está | O que falta | Campos a preencher |
 |---|---|---|---|
 | Vídeo | logo após o hero | vídeo 9:16 (≈40s) com legenda queimada, mesmo gancho do anúncio | `VIDEO_URL` |
-| Autora | antes da oferta | foto real da Jéssica Correia cozinhando + 2 linhas de apresentação | `assets/autora.jpg`, `TEXTO_DE_APRESENTACAO` |
 | Depoimentos | antes da oferta | 2 depoimentos reais, com autorização de uso | `DEPOIMENTO_1`, `DEPOIMENTO_2` |
 
 ## Regra dos depoimentos
