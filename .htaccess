@@ -1,0 +1,18 @@
+# Deploy via Git: protege arquivos internos do repositório
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^\.git(/|$) - [R=404,L]
+  RewriteRule \.(md|gitignore|htaccess)$ - [R=404,L,NC]
+</IfModule>
+
+# Cache curto para HTML (garante que alterações apareçam rápido)
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Compressão
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
