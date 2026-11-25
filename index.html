@@ -6,7 +6,7 @@
 <title>100 Receitas Naturais + 45 de bônus | R$ 19,90</title>
 <meta name="description" content="São 18h40 e você não sabe o que preparar? 100 receitas naturais com modo de preparo e lista de compras, mais 3 bônus. Acesso imediato.">
 <style>
-:root{--green:#113b32;--green2:#1e5948;--sage:#dce7d8;--cream:#f7f3e9;--paper:#fffdfa;--earth:#bd7354;--earth2:#a55f42;--ink:#142f28;--muted:#587166;--line:rgba(20,47,40,.12)}
+:root{--green:#5c131e;--green2:#7d1d2b;--sage:#f1e4e4;--cream:#faf4ee;--paper:#fffdfa;--earth:#8c2533;--earth2:#6f1a26;--ink:#2a1418;--muted:#6d5a5a;--line:rgba(42,20,24,.12)}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
@@ -83,11 +83,13 @@ summary::-webkit-details-marker{display:none}
 details p{margin-top:8px;font-size:15.5px;color:var(--muted)}
 footer{padding:30px 0;font-size:13px;color:var(--muted);text-align:center;background:var(--cream)}
 footer p{margin-bottom:10px}
-.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;z-index:9}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;z-index:9;transform:translateY(125%);opacity:0;pointer-events:none;transition:transform .3s ease,opacity .25s ease;box-shadow:0 -8px 24px rgba(42,20,24,.08)}
+.sticky.is-show{transform:none;opacity:1;pointer-events:auto}
 .sticky div{font-size:13px;line-height:1.2;color:var(--muted)}
 .sticky div b{display:block;font-size:19px;color:var(--green)}
 .sticky .btn{flex:1;padding:13px;font-size:16px}
 footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+#oferta{scroll-margin-top:16px}
 @media(min-width:700px){.recipes{grid-template-columns:1fr 1fr}.wrap{max-width:640px}}
 @media(max-width:359px){.guar,.author{flex-direction:column;align-items:flex-start}.guar svg,.author img{align-self:center}}
 </style>
@@ -144,7 +146,7 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
     <div class="r"><img src="assets/receita-pudim.webp" alt="Pudim de chia com manga" width="960" height="717" loading="lazy"><div class="t"><b>Pudim de chia com manga</b><span>Prepare na véspera</span><p>Sobremesa gelada que fica pronta enquanto você dorme.</p></div></div>
   </div>
   <p class="ilus">Imagens ilustrativas.</p>
-  <a class="btn" style="margin-top:20px" href="https://pay.cakto.com.br/6frywru">Quero essas e as outras 92</a>
+  <a class="btn" style="margin-top:20px" href="#oferta">Quero essas e as outras 92</a>
   <h3 class="sub3">10 categorias, 10 receitas em cada</h3>
   <div class="chips"><span>Cafés da manhã e lanches</span><span>Almoços completos</span><span>Jantares práticos</span><span>Saladas e acompanhamentos</span><span>Sopas e caldos</span><span>Lanches e petiscos</span><span>Bebidas e vitaminas</span><span>Doces e sobremesas</span><span>Receitas brasileiras e regionais</span><span>Molhos, pastas e bases</span></div>
 </div></section>
@@ -210,7 +212,7 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
   </div>
 
   <div class="guar">
-    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="#fffdfa" stroke="#113b32" stroke-width="4"/><circle cx="60" cy="60" r="47" fill="none" stroke="#bd7354" stroke-width="2" stroke-dasharray="4 4"/><text x="60" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#113b32">7</text><text x="60" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#113b32">DIAS</text><text x="60" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#a55f42">GARANTIA</text></svg>
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="#fffdfa" stroke="#5c131e" stroke-width="4"/><circle cx="60" cy="60" r="47" fill="none" stroke="#bd7354" stroke-width="2" stroke-dasharray="4 4"/><text x="60" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#5c131e">7</text><text x="60" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#5c131e">DIAS</text><text x="60" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#8c2533">GARANTIA</text></svg>
     <div><h3>Garantia de 7 dias</h3><p>Compre, abra as receitas e teste. Se não for para você, peça o reembolso em até 7 dias pelo e-mail <b>suporte@salevo.site</b>.</p></div>
   </div>
 </div></section>
@@ -241,7 +243,7 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
   <p><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a></p><p>Suporte: suporte@salevo.site · © 2026</p>
 </div></footer>
 
-<div class="sticky"><div>R$ 19,90<b>à vista</b></div><a class="btn" href="https://pay.cakto.com.br/6frywru">Quero as 100 receitas</a></div>
+<div class="sticky" id="sticky"><div>R$ 19,90<b>à vista</b></div><a class="btn" href="#oferta">Quero as 100 receitas</a></div>
 
 <script>
 // PRAZO DOS BÔNUS: troque a data abaixo (ano, mês 0-11, dia). Só mantenha se for tirar os bônus mesmo.
@@ -275,6 +277,22 @@ if(new Date()>END){document.getElementById("bar").style.display="none";document.
 document.querySelectorAll('a[href*="pay.cakto"]').forEach(function(a){a.addEventListener("click",function(){try{fbq("track","InitiateCheckout",{value:19.90,currency:"BRL"})}catch(e){}})});
 // Evento ao dar play no vídeo
 var v=document.querySelector("#video video");if(v){v.addEventListener("play",function(){try{fbq("trackCustom","VSLPlay")}catch(e){}},{once:true})}
+</script>
+<script>
+// Barra fixa: so aparece depois que a pessoa comeca a rolar
+(function(){
+  var bar=document.getElementById("sticky");
+  if(!bar)return;
+  var shown=false;
+  function update(){
+    var y=window.pageYOffset||document.documentElement.scrollTop||0;
+    var should=y>280;
+    if(should!==shown){shown=should;bar.classList.toggle("is-show",should)}
+  }
+  window.addEventListener("scroll",update,{passive:true});
+  window.addEventListener("resize",update);
+  update();
+})();
 </script>
 </body>
 </html>
