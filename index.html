@@ -24,16 +24,22 @@ h2{font-size:28px;margin-bottom:12px}
 .hero{padding:30px 0 40px;background:linear-gradient(var(--cream),var(--paper))}
 .hero h1{font-size:34px;margin:6px 0 14px}
 .hero p.sub{color:var(--muted);margin-bottom:20px;font-size:16px}
-.hero-product{display:flex;flex-direction:column;align-items:center;gap:16px;margin:20px auto 0;padding:18px 16px 20px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 30px rgba(42,20,24,.08)}
-.hero-product img{width:100%;max-width:390px;height:auto;border-radius:12px;box-shadow:0 12px 24px rgba(42,20,24,.2)}
+.hero-product{display:flex;flex-direction:column;align-items:center;gap:14px;margin:22px auto 0;padding:14px 14px 18px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 30px rgba(42,20,24,.08)}
+.hero-product img{width:78%;max-width:280px;height:auto;border-radius:10px;box-shadow:0 10px 22px rgba(42,20,24,.18)}
 .hero-product-copy{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;width:100%;min-width:0}
-.hero-product-copy .product-label{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--earth2)}
-.hero-product-copy strong{font:700 25px/1.12 Georgia,"Times New Roman",serif;color:var(--green)}
-.hero-product-copy span:not(.product-label){font-size:15px;line-height:1.45;color:var(--muted)}
-.hero-product-copy .product-price{font-size:15px;line-height:1.4;color:var(--green2)}
-.hero-product-copy .btn{width:100%;margin-top:3px;padding:14px 12px;font-size:16px}
-.hero-product-copy small{font-size:12px;line-height:1.35;color:var(--muted)}
-@media(min-width:700px){.hero-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;padding:24px}.hero-product img{width:100%;max-width:360px;justify-self:center}.hero-product-copy{align-items:flex-start;text-align:left}.hero-product-copy strong{font-size:32px}.hero-product-copy span:not(.product-label){font-size:17px}.hero-product-copy .product-price{font-size:17px}.hero-product-copy .btn{width:100%;font-size:18px;padding:17px 18px}}
+.hero-product-copy .product-label{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--earth2)}
+.hero-product-copy h2{font-size:28px;line-height:1.08;margin:0;color:var(--green)}
+.hero-product-copy p{font-size:14px;line-height:1.4;color:var(--muted);max-width:440px}
+.product-points{list-style:none;padding:0;width:100%;max-width:460px;text-align:left;font-size:13px;line-height:1.35;color:var(--ink)}
+.product-points li{position:relative;padding:6px 4px 6px 25px;border-bottom:1px solid var(--line)}
+.product-points li:before{content:"✓";position:absolute;left:3px;color:var(--green2);font-weight:800}
+.product-price{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:4px 8px;color:var(--muted)}
+.product-price span{font-size:13px}
+.product-price strong{font:700 30px/1 Georgia,"Times New Roman",serif;color:var(--green)}
+.hero-product-copy .btn{width:100%;max-width:460px;margin-top:3px;padding:14px 12px;font-size:15px}
+.hero-product-copy small{font-size:11px;line-height:1.35;color:var(--muted)}
+@media(max-width:359px){.hero-product{gap:12px;padding:12px}.hero-product img{width:70%;max-width:210px}.hero-product-copy{gap:8px}.hero-product-copy h2{font-size:24px}.hero-product-copy p{font-size:13px}.product-points{font-size:12px}.hero-product-copy .btn{font-size:14px}.hero-product-copy small{font-size:10px}}
+@media(min-width:700px){.hero-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;padding:24px}.hero-product img{width:100%;max-width:360px;justify-self:center}.hero-product-copy{align-items:flex-start;text-align:left;gap:10px}.hero-product-copy .product-label{font-size:12px}.hero-product-copy h2{font-size:34px}.hero-product-copy p{font-size:16px}.product-points{font-size:15px}.product-points li{padding:7px 4px 7px 27px}.product-price{justify-content:flex-start}.product-price strong{font-size:32px}.hero-product-copy .btn{font-size:18px;padding:17px 18px}.hero-product-copy small{font-size:12px}}
 .hero .vid{margin-top:4px}
 .btn{display:block;text-align:center;background:var(--earth);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:17px 18px;border-radius:14px;box-shadow:0 6px 16px rgba(165,95,66,.3)}
 .btn:active{background:var(--earth2)}
@@ -135,11 +141,16 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
     <img src="assets/produto.webp" alt="Capa do guia digital 100 Receitas Naturais" width="720" height="1080" fetchpriority="high">
     <div class="hero-product-copy">
       <span class="product-label">O que você vai receber</span>
-      <strong>100 Receitas Naturais</strong>
-      <span>Um guia digital organizado em 10 categorias, com ingredientes, modo de preparo e lista de compras.</span>
-      <b class="product-price">Acesso digital · pagamento único de R$ 19,90</b>
-      <a class="btn" href="#oferta">Ver o guia completo e os bônus</a>
-      <small>Consulte no celular ou imprima em casa.</small>
+      <h2>100 Receitas Naturais</h2>
+      <p>Um guia digital para encontrar novas ideias sem voltar a procurar em dezenas de posts salvos.</p>
+      <ul class="product-points">
+        <li>100 receitas reunidas e organizadas em 10 categorias</li>
+        <li>Ingredientes, preparo passo a passo e lista de compras</li>
+        <li>3 bônus digitais grátis até 25/12</li>
+      </ul>
+      <div class="product-price"><span>Pagamento único</span><strong>R$ 19,90</strong></div>
+      <a class="btn" href="#oferta">Ver a oferta completa e os bônus</a>
+      <small>PDF para consultar no celular ou imprimir em casa.</small>
     </div>
   </div>
  </div></header>
