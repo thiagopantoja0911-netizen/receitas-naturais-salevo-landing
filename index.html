@@ -337,12 +337,13 @@ var v=document.querySelector("#video video");if(v){v.addEventListener("play",fun
 <script>
 // Barra fixa: so aparece depois que a pessoa comeca a rolar
 (function(){
-  var bar=document.getElementById("sticky");
+  var bar=document.getElementById("sticky"), product=document.querySelector(".hero-product");
   if(!bar)return;
   var shown=false;
   function update(){
     var y=window.pageYOffset||document.documentElement.scrollTop||0;
-    var should=y>280;
+    var productOut=!product||product.getBoundingClientRect().bottom<=0;
+    var should=y>280&&productOut;
     if(should!==shown){shown=should;bar.classList.toggle("is-show",should)}
   }
   window.addEventListener("scroll",update,{passive:true});
