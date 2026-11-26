@@ -18,11 +18,11 @@ section{padding:44px 0}
 .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--earth2);margin-bottom:10px}
 h2{font-size:28px;margin-bottom:12px}
 .lead{color:var(--muted);margin-bottom:22px}
-.bar{background:var(--green);color:#fff;text-align:center;font-size:14px;padding:9px 14px;font-weight:600}
+.bar{background:var(--green);color:#fff;text-align:center;font-size:14px;padding:9px 14px;font-weight:600;font-variant-numeric:tabular-nums}
 .bar b{color:#f2c9b3}
 .hero{padding:30px 0 40px;background:linear-gradient(var(--cream),var(--paper))}
 .hero h1{font-size:34px;margin:6px 0 14px}
-.hero p.sub{color:var(--muted);margin-bottom:20px}
+.hero p.sub{color:var(--muted);margin-bottom:20px;font-size:16px}
 .hero .vid{margin-top:4px}
 .btn{display:block;text-align:center;background:var(--earth);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:17px 18px;border-radius:14px;box-shadow:0 6px 16px rgba(165,95,66,.3)}
 .btn:active{background:var(--earth2)}
@@ -113,12 +113,11 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="bar" id="bar">Bônus grátis disponíveis até <b id="dl">31/12</b></div>
+<div class="bar" id="bar">Bônus grátis acabam em <b id="cd">--</b></div>
 
 <header class="hero"><div class="wrap">
-  <h1>São 18h40. A geladeira está cheia e você não faz ideia do que preparar.</h1>
-  <p class="sub">É essa decisão que transforma “hoje eu cozinho” em mais um pedido de delivery. O guia entrega a resposta pronta: receitas de preparo simples, cada uma com ingredientes, modo de preparo e lista de compras.</p>
-  <div class="vid" id="video"><video src="assets/vsl.mp4" poster="assets/vsl-poster.jpg" controls playsinline preload="metadata"></video></div>
+  <h1>Chega de salvar 50 receitas e não ter nenhuma organizada.</h1>
+  <p class="sub">Aquela receita que você salvou e nunca mais achou? Aqui ela já tem lugar.</p>
 </div></header>
 
 <section class="alt"><div class="wrap">
@@ -248,7 +247,17 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
 <script>
 // PRAZO DOS BÔNUS: troque a data abaixo (ano, mês 0-11, dia). Só mantenha se for tirar os bônus mesmo.
 var END=new Date(2026,11,31,23,59,59), LABEL="31/12";
-document.getElementById("dl").textContent=LABEL;
+(function(){
+  var el=document.getElementById("cd");
+  function pad(n){return n<10?"0"+n:""+n}
+  function tick(){
+    var d=END-new Date();
+    if(d<=0){document.getElementById("bar").style.display="none";return}
+    var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);
+    el.textContent=(days>0?days+"d ":"")+pad(h)+"h "+pad(m)+"min "+pad(sec)+"s";
+  }
+  tick();setInterval(tick,1000);
+})();
 document.querySelectorAll(".dl2").forEach(function(e){e.textContent=LABEL});
 if(new Date()>END){document.getElementById("bar").style.display="none";document.querySelectorAll(".dl2").forEach(function(e){e.parentNode.removeChild(e)})}
 (function(){
