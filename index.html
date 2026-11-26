@@ -113,7 +113,7 @@ src="https://www.facebook.com/tr?id=1146808914974868&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="bar" id="bar">Bônus grátis acabam em <b id="cd">--</b></div>
+<div class="bar" id="bar">Bônus grátis acabam no Natal <b>(25/12)</b> · faltam <b id="cd">--</b></div>
 
 <header class="hero"><div class="wrap">
   <h1>Chega de salvar 50 receitas e não ter nenhuma organizada.</h1>
@@ -253,7 +253,7 @@ var END=new Date(2026,11,25,23,59,59), LABEL="25/12";
     var d=END-new Date();
     if(d<=0){document.getElementById("bar").style.display="none";return}
     var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);
-    el.textContent=(days>0?days+"d ":"")+pad(h)+"h "+pad(m)+"min "+pad(sec)+"s";
+    el.textContent=(days>0?(days===1?"1 dia ":days+" dias "):"")+pad(h)+"h "+pad(m)+"min "+pad(sec)+"s";
   }
   tick();setInterval(tick,1000);
 })();
